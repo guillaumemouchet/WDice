@@ -1,0 +1,45 @@
+
+package ch.hearc.dice.moo.implementation;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import ch.hearc.dice.moo.specification.DiceVariable_I;
+import ch.hearc.tools.Chrono;
+import ch.hearc.tools.algo.AlgoIteratif_A;
+import ch.hearc.tools.algo.IterationListener;
+
+public class DiceVariable extends AlgoIteratif_A implements DiceVariable_I
+	{
+
+	/*------------------------------------------------------------------*\
+	|*							Constructeurs							*|
+	\*------------------------------------------------------------------*/
+
+	public DiceVariable(DiceVariableInput diceVariableInputs)
+		{
+		// Inputs
+			{
+			this.diceVariableInput = diceVariableInputs;
+			}
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------*\
+	|*				Get				*|
+	\*------------------------------*/
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------------------------------------------*\
+	|*							Attributs Private						*|
+	\*------------------------------------------------------------------*/
+
+	// Inputs
+	private DiceVariableInput diceVariableInput;
+	}

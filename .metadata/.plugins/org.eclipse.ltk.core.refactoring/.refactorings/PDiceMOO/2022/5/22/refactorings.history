@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ch.hearc.dice.moo.implementation.use.UseSpeedUpP&apos; to &apos;UseSpeedUP&apos;&#x0D;&#x0A;- Original project: &apos;PDiceMOO&apos;&#x0D;&#x0A;- Original element: &apos;ch.hearc.dice.moo.implementation.use.UseSpeedUpP&apos;&#x0D;&#x0A;- Renamed element: &apos;ch.hearc.dice.moo.implementation.use.UseSpeedUP&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UseSpeedUpP&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ch.hearc.dice.moo.implementation.use{UseSpeedUpP.java[UseSpeedUpP" matchStrategy="1" name="UseSpeedUP" qualified="false" references="true" similarDeclarations="false" stamp="1654022134774" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ch.hearc.c_gui.tools.decorateur.JFrameBaseLine"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.dice.ExperienceSerie"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.dice.Experience"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.dice.Dice"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.dice_variable.TypeProcessing"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.runtime.Threads"/>
+    <fullyQualifiedTypeName name="com.sun.tools.classfile.Opcode.Set"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.Experience"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.ExperienceSerie"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Iterable"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Spliterators"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="org.graalvm.compiler.lir.alloc.lsra.Interval"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="ch.hearc.b_poo.j_thread.c_vecteurs.tools.Intervale"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="ch.hearc.tools.algo.AlgoIteratif_I"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.specification.FactoryDiceVariable"/>
+    <fullyQualifiedTypeName name="ch.hearc.tools.algo.AlgoIteratif_A"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Runtime"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.test.TestChrono"/>
+    <fullyQualifiedTypeName name="java.lang.AssertionError"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.TypeProcessing"/>
+    <fullyQualifiedTypeName name="sun.util.locale.provider.AvailableLanguageTags"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.Dice"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.DiceVariable"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="javax.sound.midi.VoiceStatus"/>
+    <fullyQualifiedTypeName name="ch.hearc.tools.Chrono"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.implementation.DiceVariableInputs"/>
+    <fullyQualifiedTypeName name="ch.hearc.dice.moo.specification.DiceVariable_I"/>
+    <fullyQualifiedTypeName name="ch.hearc.tools.algo.IterationListener"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,34 @@
+
+package ch.hearc.dice.moo.implementation.use;
+
+import ch.hearc.dice.moo.implementation.Dice;
+import ch.hearc.dice.moo.implementation.TypeProcessing;
+
+public class UseSpeedUp
+	{
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	public static void main(String[] args)
+		{
+		main();
+		}
+
+	public static void main()
+		{
+		int nbFace = Integer.parseInt(System.getProperty("nbFace"));
+		int nbExperience = Integer.parseInt(System.getProperty("nbExperience"));
+
+		Dice sequentialDice = new Dice(nbFace, nbExperience, TypeProcessing.SEQUENTIEL);
+		Dice parallelDice = new Dice(nbFace, nbExperience, TypeProcessing.PARALLEL);
+
+		// Sequential
+
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	}
