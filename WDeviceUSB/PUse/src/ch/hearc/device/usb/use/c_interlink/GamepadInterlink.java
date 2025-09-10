@@ -1,0 +1,95 @@
+
+package ch.hearc.device.usb.use.c_interlink;
+
+import java.util.Arrays;
+import java.util.Optional;
+
+import ch.hearc.device.usb.api.generic.Component_I;
+import ch.hearc.device.usb.api.generic.GamepadGeneric_A;
+
+import net.java.games.input.Controller.Type;
+
+/**
+ * singleton
+ *
+ * model InterLink Elite
+ */
+public class GamepadInterlink extends GamepadGeneric_A
+	{
+
+	/*------------------------------------------------------------------*\
+	|*							Constructeurs							*|
+	\*------------------------------------------------------------------*/
+
+	private GamepadInterlink()
+		{
+		super();
+		}
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	public static synchronized GamepadInterlink getInstance()
+		{
+		if (instance == null)
+			{
+			instance = new GamepadInterlink();
+			}
+
+		return instance;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------*\
+	|*				Get				*|
+	\*------------------------------*/
+
+	@Override
+	public String getName()
+		{
+		return CONTROLLER_INTERLINK_NAME;
+		}
+
+	@Override
+	public Type getType()
+		{
+		return Type.STICK;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	@Override
+	protected Optional<Component_I> toComponent(String id)
+		{
+		try
+			{
+			return Optional.of(ComponentInterlink.lookupById(id));
+			}
+		catch (NullPointerException e)
+			{
+			String message = "[GamepadInterlink] : panic error : code error : check name of Enum ComponentInterlink ! Cause :  " + id + " not found in " + Arrays.toString(ComponentInterlink.values());
+			System.err.println(message);
+
+			return Optional.empty();
+			}
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Attributs Private						*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	private static GamepadInterlink instance = null;
+
+	private static final String CONTROLLER_INTERLINK_NAME = "InterLink Elite";
+
+	}

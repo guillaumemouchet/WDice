@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ch.hearc.freescale.Damian.use.gamepad.generic.listener.ComponentEvent"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.discovery.code.gamepad.generic.listener.ComponentEvent"/>
+    <fullyQualifiedTypeName name="net.java.games.input.ControllerEnvironment"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.api.generic.ComponentGeneric"/>
+    <fullyQualifiedTypeName name="net.java.games.input.Component"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.discovery.code.gamepad.xeoxnew.ComponentXeox"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.discovery.code.gamepad.generic.MinMaxRecorder"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.discovery.code.gamepad.generic.ComponentsMinMaxRecorder"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.discovery.code.gamepad.wireless.ComponentWireless"/>
+    <fullyQualifiedTypeName name="sun.tools.tree.SuperExpression"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.api.generic.GamepadGeneric"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.api.generic.IComponent"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.api.generic.listener.GamepadListener"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.api.generic.listener.ComponentEvent"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicBoolean"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.api.generic.GamepadConnexionException"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="net.java.games.input.Controller"/>
+    <fullyQualifiedTypeName name="net.java.games.input.DirectAndRawInputEnvironmentPlugin"/>
+    <fullyQualifiedTypeName name="ch.hearc.device.usb.api.interlink.ComponentInterlink"/>
+    <fullyQualifiedTypeName name="net.java.games.input.Controller.Type"/>
+</qualifiedTypeNameHistroy>

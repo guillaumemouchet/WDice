@@ -1,0 +1,13 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:UseCodeDecouverte,org.eclipse.launchbar.core.descriptorType.default\:UseGamepadInterlink,org.eclipse.launchbar.core.descriptorType.default\:UseGamepadWireless (2),org.eclipse.launchbar.core.descriptorType.default\:UseGamepadXeox (1),org.eclipse.launchbar.core.descriptorType.default\:UseGamepadXeox,org.eclipse.launchbar.core.descriptorType.default\:UseCodeDecouverte (1)
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:TestXXX/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:UseCodeDecouverte\ (1)/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:UseCodeDecouverte\ (1)/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:UseHello/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:UseHello/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:linux_makejar/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:linux_makejar/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:win_makejar/activeLaunchMode=run

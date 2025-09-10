@@ -1,7 +1,0 @@
-INDEX VERSION 1.131+C:\DEV\Java\WDice\.metadata\.plugins\org.eclipse.jdt.core
-3554067548.index
-2203861254.index
-4021743089.index
-3615857470.index
-1865797976.index
-1613450296.index

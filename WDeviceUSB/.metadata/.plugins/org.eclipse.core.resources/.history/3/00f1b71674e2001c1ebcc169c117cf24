@@ -1,0 +1,137 @@
+
+package ch.hearc.device.usb.use.a_xeox;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import ch.hearc.device.usb.api.generic.Component_I;
+
+/**
+ * <pre>
+ *  Exemple 1 :
+ *
+ *   	JOYSTICK_LEFT_UP_DOWN("y", -0.996124208, 0.996093631, -1, 1)
+ *
+ *		Le nom/numéro/identifiant du composant que l'on apelle JOYSTICK_LEFT_UP_DOWN est "y".
+ * 		Indique que le "JOYSTICK_LEFT_UP_DOWN" correspond à l'axe d'identifiant "y" de la manette.
+ * 		La STICK donne des valeurs dans [-0.996124208,0.996093631] sur cet axe et on souhaite les normaliser entre [-1, 1]
+ *
+ * Exemple 2 :
+ *
+ *		 BUTTON_A("0", 0, 1, 0, 1),
+ *
+ *		 Le nom/numéro/identifiant du composant que l'on apelle BUTTON_A est "0".
+ *		 Il prend deux valeurs: 0 et 1
+ *		 On normalise ces valeurs selon la regle:
+ *
+ *				0 -> 0
+ *				1 -> 1
+ *
+ *		 Aucun changement (identity)
+ *
+ * Note:
+ *
+ * 		(N1) La normalisation est utile pour les STICK analogiques.
+ * 		(N2) Les nomdes enum comme BUTTON_A ou JOYSTICK_LEFT_UP_DOWN est arbitraire.
+ * 		(n3) Voir le pdf forunit, pour un choix commun,
+ *
+ * Tip:
+ *
+ * 		On obtient le nom des composants, et les valeurs qu'ils prennent jouant avec le code decouverte fournit!
+ *  </pre>
+ */
+public enum ComponentXeox implements Component_I
+	{
+
+BUTTON_A("0", 0, 1, 0, 1), //
+BUTTON_B("1", 0, 1, 0, 1), //
+BUTTON_X("2", 0, 1, 0, 1), //
+BUTTON_Y("3", 0, 1, 0, 1), //
+JOYSTICK_LEFT_UP_DOWN("ly", -0.996124208, 0.996093631, -1, 1), //
+JOYSTICK_RIGHT_UP_DOWN("ry", -0.996124208, 0.996093631, -1, 1), //
+JOYSTICK_LEFT_LEFT_RIGHT("lx", -0.996124208, 0.996093631, -1, 1), //
+JOYSTICK_RIGHT_LEFT_RIGHT("lx", -0.996124208, 0.996093631, -1, 1); //
+	/*------------------------------------------------------------------*\
+	|*							Constructeurs							*|
+	\*------------------------------------------------------------------*/
+
+	private ComponentXeox(String idComponent, double minvalue, double maxValue, double minOut, double maxOut)
+		{
+		this.idComponent = idComponent;
+		this.maxValue = maxValue;
+		this.minValue = minvalue;
+		this.minOut = minOut;
+		this.maxOut = maxOut;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	@Override
+	public double calibrate01(double value)
+		{
+		return (value - minValue) / (Math.abs(minValue - maxValue)) * Math.abs(minOut - maxOut) + minOut;
+		}
+
+	/*------------------------------*\
+	|*				Get				*|
+	\*------------------------------*/
+
+	@Override
+	public String getIdentifier()
+		{
+		return this.idComponent;
+		}
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	public static ComponentXeox lookupById(String id)
+		{
+		createMapIdComponent();
+		return mapIdComponent.get(id);
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	private static Map<String, ComponentXeox> createMapIdComponent()
+		{
+		if (mapIdComponent == null)
+			{
+			mapIdComponent = new HashMap<String, ComponentXeox>();
+			for(ComponentXeox componentXeox:ComponentXeox.values())
+				{
+				mapIdComponent.put(componentXeox.getIdentifier(), componentXeox);
+				}
+			}
+
+		return mapIdComponent;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Attributs Private						*|
+	\*------------------------------------------------------------------*/
+
+	//Input
+	private String idComponent;
+	private double minValue;
+	private double maxValue;
+	private double minOut;
+	private double maxOut;
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	//Tools
+	private static Map<String, ComponentXeox> mapIdComponent = null;
+
+	}

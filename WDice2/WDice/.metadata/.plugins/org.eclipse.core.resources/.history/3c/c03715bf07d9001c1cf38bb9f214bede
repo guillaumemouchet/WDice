@@ -1,0 +1,24 @@
+
+package ch.hearc.dice.moo.implementation.use;
+
+public class UseSpeedUp
+	{
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	public static void main(String[] args)
+		{
+		main();
+		}
+
+	public static void main()
+		{
+		int nbFace = Integer.parseInt(System.getProperty("nbFace"));
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	}

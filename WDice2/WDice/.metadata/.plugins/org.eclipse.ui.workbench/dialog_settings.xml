@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.Preferences"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="PreferencesImportWizard">
+		<item key="" value="\\intra.he-arc.ch\ORG\ING\Formation\200_Bachelor\240_Niveau-2\242_ProfsAEtudiants\2243_Ingenierie_logicielle_SA\2243_1_Java\01_Soft\02_Preference_Eclipse\eclipseCBI_27.epf"/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="\\intra.he-arc.ch\ORG\ING\Formation\200_Bachelor\240_Niveau-2\242_ProfsAEtudiants\2243_Ingenierie_logicielle_SA\2243_1_Java\01_Soft\02_Preference_Eclipse\eclipseCBI_27.epf"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+</section>

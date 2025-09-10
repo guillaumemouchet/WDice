@@ -1,0 +1,86 @@
+
+package ch.hearc.dice.moo.implementation;
+
+import java.util.Map;
+
+import ch.hearc.b_poo.j_thread.c_vecteurs.tools.Intervale;
+import ch.hearc.dice.moo.specification.DiceVariable_I;
+import ch.hearc.tools.Chrono;
+import ch.hearc.tools.algo.AlgoIteratif_A;
+
+public class DiceVariable extends AlgoIteratif_A implements DiceVariable_I
+	{
+
+	/*------------------------------------------------------------------*\
+	|*							Constructeurs							*|
+	\*------------------------------------------------------------------*/
+
+	public DiceVariable(DiceVariableInput diceVariableInputs)
+		{
+		// Inputs
+			{
+			this.diceVariableInput = diceVariableInputs;
+			}
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------*\
+	|*				Get				*|
+	\*------------------------------*/
+
+	@Override
+	public Map<Integer, Integer> getMapFaceLancer()
+		{
+		// TODO Auto-generated method stub
+		return null;
+		}
+
+	@Override
+	public Map<Integer, Chrono> getMapFaceChrono()
+		{
+		// TODO Auto-generated method stub
+		return null;
+		}
+
+	@Override
+	public Intervale getNbFaces()
+		{
+		// TODO Auto-generated method stub
+		return null;
+		}
+
+	@Override
+	public int getNbExperience()
+		{
+		// TODO Auto-generated method stub
+		return 0;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------------------------------------------*\
+	|*							Attributs Private						*|
+	\*------------------------------------------------------------------*/
+
+	// Inputs
+	private DiceVariableInput diceVariableInput;
+
+	@Override
+	public void iterationStep(int i)
+		{
+		// TODO Auto-generated method stub
+		
+		}
+
+	@Override
+	public boolean isFini(int i)
+		{
+		// TODO Auto-generated method stub
+		return false;
+		}
+	}

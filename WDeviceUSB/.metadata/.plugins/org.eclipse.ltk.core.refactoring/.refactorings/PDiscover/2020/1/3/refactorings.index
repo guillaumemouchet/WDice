@@ -1,0 +1,27 @@
+1578921046509	Rename method 'getName'
+1578921066578	Rename field 'mapName'
+1578921083250	Rename method 'lookupByName'
+1578928906843	Rename field 'nameComponent'
+1578928915700	Rename local variable 'name'
+1578928930712	Rename local variable 'nameComponent'
+1578986649209	Rename local variable 'componentXeox'
+1578986670661	Rename local variable 'gamepadXeox'
+1578986686119	Rename type 'UseGamepadXeox'
+1578986734157	Rename field 'nameComponent'
+1578986746898	Rename field 'idCompoenent'
+1578986774118	Rename method 'getName'
+1578986790943	Rename method 'getId'
+1578986923037	Rename local variable 'name'
+1578986948600	Rename local variable 'name'
+1578987748456	Rename local variable 'optinalComponentXeox'
+1578990961484	Rename local variable 'name'
+1578991026260	Rename local variable 'optinalComponentXeox'
+1578993866231	Copy compilation unit
+1578994199330	Copy compilation unit
+1578994640896	Copy compilation unit
+1578994647272	Copy compilation unit
+1578994792898	Copy compilation unit
+1578994888793	Copy compilation unit
+1578995323829	Rename local variable 'gamepadXeox'
+1578995335370	Rename local variable 'componentXeox'
+1578995525060	Copy compilation unit

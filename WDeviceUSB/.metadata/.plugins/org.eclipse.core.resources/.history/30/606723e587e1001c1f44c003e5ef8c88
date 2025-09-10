@@ -1,0 +1,112 @@
+
+package ch.hearc.device.usb.use.c_interlink;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import ch.hearc.device.usb.api.generic.Component_I;
+
+/**
+* see ComponentXeox
+* 
+* model InterLink Elite
+*/
+public enum ComponentInterlink implements Component_I
+	{
+EMPTY("", 0, 1, 0, 1), // est parfois utiliser mais pas lier à un bouton
+UNKOWN("unknown", -1, 0.2619211673736572, -1, 1), //
+SWITCH_CH5("0", 0, 1, 0, 1), //
+SWITCH_CH7("1", 0, 1, 0, 1), //
+BUTTON_RESET("2", 0, 1, 0, 1), //
+SWITCH_CH8_FRONT("4", 0, 1, 0, 1), //
+SWITCH_CH8_BACK("3", 0, 1, 0, 1), //
+FLAPS_CH6("rx", -1, 1, 0, 1), //
+JOYSTICK_LEFT_UP_DOWN("z", -0.617181658744812, 0.5952391624450684, -1, 1), //
+JOYSTICK_LEFT_LEFT_RIGHT("ry", -0.6718699932098389, 0.690485954284668, -1, 1), //
+JOYSTICK_RIGHT_UP_DOWN("y", -0.6093690395355225, 0.5873044729232788, -1, 1), //
+JOYSTICK_RIGHT_LEFT_RIGHT("x", -0.6718699932098389, 0.7142900228500366, -1, 1); //
+
+	/*------------------------------------------------------------------*\
+	|*							Constructeurs							*|
+	\*------------------------------------------------------------------*/
+
+	private ComponentInterlink(String idComponent, double minvalue, double maxValue, double minOut, double maxOut)
+		{
+		this.idComponent = idComponent;
+		this.maxValue = maxValue;
+		this.minValue = minvalue;
+		this.minOut = minOut;
+		this.maxOut = maxOut;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	@Override
+	public double calibrate01(double value)
+		{
+		return (value - minValue) / (Math.abs(minValue - maxValue)) * Math.abs(minOut - maxOut) + minOut;
+		}
+
+	/*------------------------------*\
+	|*				Get				*|
+	\*------------------------------*/
+
+	@Override
+	public String getIdentifier()
+		{
+		return this.idComponent;
+		}
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	public static ComponentInterlink lookupById(String id)
+		{
+		createMapIdComponent();
+		return mapIdComponent.get(id);
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	private static Map<String, ComponentInterlink> createMapIdComponent()
+		{
+		if (mapIdComponent == null)
+			{
+			mapIdComponent = new HashMap<String, ComponentInterlink>();
+			for(ComponentInterlink componentInterlink:ComponentInterlink.values())
+				{
+				mapIdComponent.put(componentInterlink.getIdentifier(), componentInterlink);
+				}
+			}
+
+		return mapIdComponent;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Attributs Private						*|
+	\*------------------------------------------------------------------*/
+
+	//Input
+	private String idComponent;
+	private double minValue;
+	private double maxValue;
+	private double minOut;
+	private double maxOut;
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	//Tools
+	private static Map<String, ComponentInterlink> mapIdComponent = null;
+
+	}

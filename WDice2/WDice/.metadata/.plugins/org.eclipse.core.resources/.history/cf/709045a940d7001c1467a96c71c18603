@@ -1,0 +1,186 @@
+
+package ch.hearc.dice.moo.implementation;
+
+import org.junit.jupiter.api.Assertions;
+
+public class Dice implements Runnable
+	{
+
+	/*------------------------------------------------------------------*\
+	|*							Constructeurs							*|
+	\*------------------------------------------------------------------*/
+
+	public Dice(int nbFaces, int nbExperiences, TypeProcessing typeProcessing)
+		{
+		// Inputs
+			{
+			this.nbFaces = nbFaces;
+			this.nbExperiences = nbExperiences;
+			this.typeProcessing = typeProcessing;
+			}
+
+		// Tools
+			{
+			this.nbThreads = Runtime.getRuntime().availableProcessors();
+			this.nbPerThread = (int)Math.floor(nbExperiences / this.nbThreads);
+			}
+
+		// Outputs
+			{
+			this.nbLancerMoyen = 0;
+			}
+		}
+
+	public Dice(int nbExperiences, TypeProcessing typeProcessing)
+		{
+		this(NB_FACE, nbExperiences, typeProcessing);
+		}
+
+	public Dice(TypeProcessing typeProcessing)
+		{
+		this(NB_FACE, NB_EXPERIENCES, typeProcessing);
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	@Override
+	public void run()
+		{
+		switch(this.typeProcessing)
+			{
+			case SEQUENTIEL:
+				{
+				runSequentiel();
+				break;
+				}
+			case RUNNABLE:
+				{
+				runRunnable();
+				break;
+				}
+			case PARALLEL:
+				{
+				runParallel();
+				break;
+				}
+			default:
+				{
+				Assertions.fail("[Dice]:run(): Processing type " + this.typeProcessing + " unknown.");
+				break;
+				}
+			}
+		}
+
+	/*------------------------------*\
+	|*				Get				*|
+	\*------------------------------*/
+
+	public int getNbLancerMoyen()
+		{
+		return this.nbLancerMoyen;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	private void runSequentiel()
+		{
+		int nbLancerTotal = 0;
+
+		for(int k = 0; k < this.nbExperiences; k++)
+			{
+			Experience experience = new Experience(this.nbFaces);
+
+			experience.run();
+
+			nbLancerTotal += experience.getNbLancer();
+			}
+
+		double mean = (double)nbLancerTotal / this.nbExperiences;
+		this.nbLancerMoyen = (int)Math.ceil(mean);
+		}
+
+	private void runRunnable()
+		{
+		int nbLancerTotal = 0;
+
+		// Create, run and get the serie's result
+		ExperienceSerie serie = new ExperienceSerie(this.nbExperiences, this.nbFaces);
+
+		serie.run();
+
+		nbLancerTotal += serie.getNbLancerTotal();
+
+		double mean = (double)nbLancerTotal / this.nbExperiences;
+		this.nbLancerMoyen = (int)Math.ceil(mean);
+		}
+
+	private void runParallel()
+		{
+		// Create two arrays containing the threads and the series
+		Thread[] tabThreads = new Thread[this.nbThreads];
+		ExperienceSerie[] tabSeries = new ExperienceSerie[this.nbThreads];
+
+		int nbLancerTotal = 0;
+
+		// Start the series in threads
+		for(int k = 0; k < this.nbThreads; k++)
+			{
+			ExperienceSerie serie = new ExperienceSerie(this.nbPerThread, this.nbFaces);
+			Thread thread = new Thread(serie);
+
+			tabSeries[k] = serie;
+			tabThreads[k] = thread;
+
+			thread.start();
+			}
+
+		// Wait for series to finish
+		try
+			{
+			for(Thread thread:tabThreads)
+				{
+				thread.join();
+				}
+			}
+		catch (InterruptedException e)
+			{
+			e.printStackTrace();
+			}
+
+		// Get results
+		for(ExperienceSerie serie:tabSeries)
+			{
+			nbLancerTotal += serie.getNbLancerTotal();
+			}
+
+		double mean = (double)nbLancerTotal / (this.nbThreads * this.nbPerThread);
+		this.nbLancerMoyen = (int)Math.ceil(mean);
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Attributs Private						*|
+	\*------------------------------------------------------------------*/
+
+	// Inputs
+	private int nbFaces;
+	private int nbExperiences;
+	private TypeProcessing typeProcessing;
+
+	// Tools
+	private int nbThreads;
+	private int nbPerThread;
+
+	// Outputs
+	private int nbLancerMoyen;
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	private static final int NB_FACE = 6;
+	private static final int NB_EXPERIENCES = Integer.MAX_VALUE / 100;
+	}

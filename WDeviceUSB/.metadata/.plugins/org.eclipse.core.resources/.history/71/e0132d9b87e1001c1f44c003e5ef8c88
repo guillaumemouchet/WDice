@@ -1,0 +1,92 @@
+
+package ch.hearc.device.usb.use.b_logitech;
+
+import java.util.Arrays;
+import java.util.Optional;
+
+import ch.hearc.device.usb.api.generic.Component_I;
+import ch.hearc.device.usb.api.generic.GamepadGeneric_A;
+
+import net.java.games.input.Controller.Type;
+
+/**
+ * singleton
+ */
+public class GamepadWireless extends GamepadGeneric_A
+	{
+
+	/*------------------------------------------------------------------*\
+	|*							Constructeurs							*|
+	\*------------------------------------------------------------------*/
+
+	private GamepadWireless()
+		{
+		super();
+		}
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	public static synchronized GamepadWireless getInstance()
+		{
+		if (instance == null)
+			{
+			instance = new GamepadWireless();
+			}
+
+		return instance;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------*\
+	|*				Get				*|
+	\*------------------------------*/
+
+	@Override
+	public String getName()
+		{
+		return CONTROLLER_WIRELESS_NAME;
+		}
+
+	@Override
+	public Type getType()
+		{
+		return Type.GAMEPAD;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	@Override
+	protected Optional<Component_I> toComponent(String id)
+		{
+		try
+			{
+			return Optional.of(ComponentWireless.lookupById(id));
+			}
+		catch (NullPointerException e)
+			{
+			String message = "[GamepadWireless] : panic error : code error : check name of Enum ComponentWireless ! Cause :  " + id + " not found in " + Arrays.toString(ComponentWireless.values());
+			System.err.println(message);
+
+			return Optional.empty();
+			}
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Attributs Private						*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------*\
+	|*			  Static			*|
+	\*------------------------------*/
+
+	private static GamepadWireless instance = null;
+
+	private static final String CONTROLLER_WIRELESS_NAME = "Logitech Cordless RumblePad 2";
+	}

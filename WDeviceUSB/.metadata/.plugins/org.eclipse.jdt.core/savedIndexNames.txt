@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\DEV\Java\WDeviceUSB\.metadata\.plugins\org.eclipse.jdt.core
+647141578.index
+2742127052.index
+139397092.index
+2165741642.index
+1613450296.index

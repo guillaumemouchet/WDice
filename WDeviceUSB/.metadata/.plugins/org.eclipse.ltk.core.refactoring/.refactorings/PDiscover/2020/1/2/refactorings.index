@@ -1,0 +1,23 @@
+1578505866434	Copy compilation units
+1578507858857	Rename local variable 'suit'
+1578685516997	Copy compilation unit
+1578685538531	Copy compilation units
+1578743597195	Copy compilation unit
+1578743609453	Copy compilation units
+1578743669577	Rename type 'ComponentXeox'
+1578743867998	Rename type 'GamepadXeox'
+1578744330960	Copy compilation units
+1578744344077	Rename type 'ComponentWireless'
+1578744356444	Rename type 'GamepadWireless'
+1578744377912	Rename type 'UseGamepadXeox'
+1578744572682	Rename type 'ComponentRealFlight'
+1578744583869	Rename type 'GamepadRealFlight'
+1578744603901	Rename type 'UseGamepadRealFlight'
+1578747813395	Rename field 'CONTROLLER_XEOX_NAME'
+1578747827970	Rename field 'controllerXeox'
+1578819979512	Rename package 'ch.hearc.device.usb.discovery.code.gamepad.realflight'
+1578822085506	Rename local variable 'min'
+1578824286392	Rename field 'CONTROLLER_XEOX_NAME'
+1578824295324	Rename field 'controllerXeox'
+1578842326131	Rename method 'calibrer'
+1578843493291	Copy compilation unit
